@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/ash
 ls $GITHUB_WORKSPACE
 ls $GITHUB_WORKSPACE/paper
 pandoc $1 -f markdown -o $2 --metadata-file=$3
