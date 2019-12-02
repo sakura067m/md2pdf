@@ -21,8 +21,8 @@ inputs:
 #     description: The name of pdf
 
 runs:
-  using: docker
-  image: Dockerfile
+  using: 'docker'
+  image: 'Dockerfile'
   # working-directory: ./
   args:
     - ${{ inputs.name }}
