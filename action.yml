@@ -1,0 +1,30 @@
+name: alpine pandoc
+
+description: make markdown to pdf
+
+inputs:
+  name:  # id of input
+    description: file to convert
+    required: true
+    default: input.md
+  output:
+    description: path to export pdf
+    required: true
+    default: output.pdf
+  metadata:
+    description: Who to greet
+    required: true
+    default: paper/_output.yaml
+
+# outputs:
+#   output: # id of output
+#     description: The name of pdf
+
+runs:
+  using: docker
+  image: Dockerfile
+  # working-directory: ./
+  args:
+    - ${{ inputs.name }}
+    - ${{ inputs.output }}
+    - ${{ inputs.metadata }}
