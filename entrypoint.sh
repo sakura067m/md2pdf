@@ -6,5 +6,5 @@ cd $1;
 if [ $# -le 3]; then
     pandoc $2 -f markdown -o $path_output
 else
-    pandoc $2 -f markdown -o $path_output -d $4
+    pandoc $2 -f markdown -o $path_output --default=$4
 fi
