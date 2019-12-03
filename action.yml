@@ -6,7 +6,7 @@ inputs:
   name:  # id of input
     description: file to convert
     required: true
-    default: input.md
+    default: paper/input.md
   output:
     description: path to export pdf
     required: true
