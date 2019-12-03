@@ -1,10 +1,9 @@
 #!/bin/ash
-path_output=$PWD/$3
-echo ::set-output name=path::$path_output
+echo ::set-output name=path::$GITHUB_WORKSPACE/$3
 cd $1;
 
 if [ $# -le 3 ]; then
-    pandoc $2 -f markdown -o $path_output
+    pandoc $2 -f markdown -o $PWD/$3
 else
-    pandoc $2 -f markdown -o $path_output --default=$4
+    pandoc $2 -f markdown -o $PWD/$3 --default=$4
 fi
